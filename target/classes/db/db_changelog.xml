@@ -1,0 +1,22 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+
+    <include file="changelog/create_exercise_table.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/create_registration_table.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/create_user_table.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/create_role_table.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/create_privilege_table.xml" relativeToChangelogFile="true"/>
+
+    <include file="changelog/insert_registration_table.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/insert_exercise_table.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/insert_user_table.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/insert_role_table.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/insert_privilege_table.xml" relativeToChangelogFile="true"/>
+
+
+</databaseChangeLog>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.7"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.7
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.7.xsd">
+
+    <changeSet id="1" author="Lukasz Nowogórski">
+        <createTable tableName="user_table">
+
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKeyName="pk_id_user" primaryKey="true" nullable="true"/>
+            </column>
+
+            <column name="username" type="varchar(100)">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="password" type = "varchar(100)">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="privilege" type = "varchar(100)">
+                <constraints nullable="true"/>
+            </column>
+
+
+        </createTable>
+        <rollback>
+            <dropTable tableName="user_table"/>
+        </rollback>
+
+        <addNotNullConstraint tableName= "user_table" columnName="id"/>
+        <addNotNullConstraint tableName= "user_table" columnName="username"/>
+        <addNotNullConstraint tableName= "user_table" columnName="password"/>
+        <addNotNullConstraint tableName= "user_table" columnName="privilege"/>
+
+
+    </changeSet>
+
+
+</databaseChangeLog>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.7"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.7
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.7.xsd">
+
+    <changeSet id="1" author="Lukasz Nowogórski">
+        <createTable tableName="role_table">
+
+            <column name="id_role" type="int" autoIncrement="true">
+                <constraints primaryKeyName="pk_id_role" primaryKey="true" nullable="true"/>
+            </column>
+
+            <column name="name_role" type="varchar(100)">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="username" type = "varchar(100)">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="password" type = "varchar(100)">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="privilege" type = "varchar(100)">
+                <constraints nullable="true"/>
+            </column>
+
+
+        </createTable>
+        <rollback>
+            <dropTable tableName="role_table"/>
+        </rollback>
+
+        <addNotNullConstraint tableName= "role_table" columnName="id_role"/>
+        <addNotNullConstraint tableName= "role_table" columnName="name_role"/>
+        <addNotNullConstraint tableName= "role_table" columnName="username"/>
+        <addNotNullConstraint tableName= "role_table" columnName="password"/>
+        <addNotNullConstraint tableName= "role_table" columnName="privilege"/>
+
+
+    </changeSet>
+
+
+</databaseChangeLog>

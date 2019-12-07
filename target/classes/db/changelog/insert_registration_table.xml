@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.7"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.7
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.7.xsd">
+
+    <changeSet id="1" author="Lukasz Nowogórski">
+    <insert tableName="registration_table">
+        <column name="id"   value="1"/>
+        <column name="name" value="Jurek Widos"/>
+        <column name="age" value="34"/>
+        <column name="pesel" value="45354789"/>
+        <column name="birth" value="2002-09-24"/>
+        <column name="adress" value="Girazona weder"/>
+        <column name="email" value="lukers@zd.es"/>
+        <column name="mobile" value="534333345"/>
+    </insert>
+    </changeSet>
+</databaseChangeLog>
+
+
+
+
+

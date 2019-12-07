@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.7"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.7
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.7.xsd">
+
+    <changeSet id="1" author="Lukasz Nowogórski">
+        <insert tableName="role_table">
+            <column name="id_role"   value="1"/>
+            <column name="name_role" value="user"/>
+            <column name="username" value = "lukasz"/>
+            <column name="password" value = "viewsonic1986!@#"/>
+            <column name="privilege" value = "read"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="2" author="Lukasz Nowogórski">
+        <insert tableName="role_table">
+            <column name="id_role"   value="2"/>
+            <column name="name_role" value="admin"/>
+            <column name="username" value = "Wlodeus"/>
+            <column name="password" value = "ilifdsf^#@!"/>
+            <column name="privilege" value = "read_write"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="3" author="Lukasz Nowogórski">
+        <insert tableName="role_table">
+            <column name="id_role"   value="3"/>
+            <column name="name_role" value="Birates"/>
+            <column name="username" value = "Gracia"/>
+            <column name="password" value = "hdssdfh!@458"/>
+            <column name="privilege" value = "read"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="4" author="Lukasz Nowogórski">
+        <insert tableName="role_table">
+            <column name="id_role"   value="4"/>
+            <column name="name_role" value="Vrates"/>
+            <column name="username" value = "Idyek"/>
+            <column name="password" value = "fssfdszx34^^!"/>
+            <column name="privilege" value = "read_write_delete"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

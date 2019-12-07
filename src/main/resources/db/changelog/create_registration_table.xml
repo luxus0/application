@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.7"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.7
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.7.xsd">
+
+<changeSet id="1" author="Lukasz Nowogórski">
+
+        <createTable tableName="registration_table">
+
+            <column name="id" type="int" autoIncrement="true">
+                 <constraints primaryKeyName="pk_id_registration" primaryKey="true" nullable="true"/>
+            </column>
+
+            <column name="name" type="varchar(100)">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="age" type="int">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="pesel" type="bigint">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="birth" type="datetime">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="adress" type="varchar(100)">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="email" type="varchar(100)">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="mobile" type="int">
+                <constraints nullable="true"/>
+            </column>
+
+        </createTable>
+
+    <rollback>
+        <dropTable tableName="registration_table"/>
+    </rollback>
+
+    <!--  <addPrimaryKey tableName="registration_table" columnNames="id" constraintName="pk_id"/>-->
+
+    <addNotNullConstraint tableName="registration_table" columnName="id"/>
+    <addNotNullConstraint tableName="registration_table" columnName="name"/>
+    <addNotNullConstraint tableName="registration_table" columnName="age"/>
+    <addNotNullConstraint tableName="registration_table" columnName="pesel"/>
+    <addNotNullConstraint tableName="registration_table" columnName="birth"/>
+    <addNotNullConstraint tableName="registration_table" columnName="adress"/>
+    <addNotNullConstraint tableName="registration_table" columnName="email"/>
+    <addNotNullConstraint tableName="registration_table" columnName="mobile"/>
+
+
+
+</changeSet>
+
+
+
+
+
+
+</databaseChangeLog>

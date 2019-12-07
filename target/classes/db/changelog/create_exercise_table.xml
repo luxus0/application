@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.7"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.7
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.7.xsd">
+
+    <changeSet id="exercise" author="Lukasz Nowogórski">
+        <createTable tableName="exercise_table">
+
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKeyName="pk_id_exercise" primaryKey="true" nullable="true"/>
+            </column>
+
+            <column name="name" type="varchar(100)">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="time" type="int">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="wage" type="int">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="level" type="varchar(100)">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="destination" type="varchar(100)">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="body_part" type="varchar(100)">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="category" type="varchar(100)">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="types" type="varchar(100)">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="instructor" type="varchar(100)">
+                <constraints nullable="true"/>
+            </column>
+
+        </createTable>
+        <rollback>
+            <dropTable tableName="exercise_table"/>
+        </rollback>
+
+        <addNotNullConstraint tableName= "exercise_table" columnName="id"/>
+        <addNotNullConstraint tableName= "exercise_table" columnName="name"/>
+        <addNotNullConstraint tableName= "exercise_table" columnName="time"/>
+        <addNotNullConstraint tableName= "exercise_table" columnName="wage"/>
+        <addNotNullConstraint tableName= "exercise_table" columnName="level"/>
+        <addNotNullConstraint tableName= "exercise_table" columnName="destination"/>
+        <addNotNullConstraint tableName= "exercise_table" columnName="body_part"/>
+        <addNotNullConstraint tableName= "exercise_table" columnName="category"/>
+        <addNotNullConstraint tableName= "exercise_table" columnName="types"/>
+        <addNotNullConstraint tableName= "exercise_table" columnName="instructor"/>
+
+    </changeSet>
+
+
+</databaseChangeLog>
